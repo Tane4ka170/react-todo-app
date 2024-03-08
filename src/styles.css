@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Adamina&display=swap");
+
+* {
+  font-family: "Adamina", serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #9a6223;
+  color: #28ac64;
+  max-width: 400px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.new-item-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.btn {
+  background: #9f3f63;
+  border: 1px solid #9a6223;
+  color: #28ac64;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background: #9f3f63;
+}
+
+.btn.btn-danger {
+  background: #e28371;
+  border: 1px solid #f25730;
+  color: #730c01;
+}
+
+.btn.btn-danger:hover,
+.btn.btn-danger:focus-visible {
+  background: #f0520a;
+}
+
+.new-item-form input {
+  outline: none;
+  border: 1px solid #0d1260;
+  background: #77ffdd;
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  color: #1069b8;
+}
+
+.new-item-form input:focus {
+  border: 1px solid #f08a0c;
+}
+
+.header {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  margin-left: 1rem;
+  list-style: none;
+}
+
+.list li:has(input:checked) label {
+  color: #d4dc49;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.list li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.list li label {
+  display: flex;
+  gap: 0.25rem;
+  cursor: pointer;
+  align-items: center;
+}
+
+.list li:has(input:focus-visible) label {
+  outline: 1px solid #f4571c;
+}
+
+.list li input {
+  outline: none;
+  width: 0;
+  height: 0;
+  appearance: none;
+  pointer-events: none;
+  position: absolute;
+}
+
+.list li label::before {
+  content: "";
+  display: block;
+  width: 0.9rem;
+  height: 0.9rem;
+  background: #a8f70e;
+  border-radius: 0.25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list li label:hover::before {
+  background: #bfc26f;
+}
+
+.list li:has(input:checked) label::before {
+  content: "✔";
+  background: #e3d125;
+  color: #07b31a;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.list li:has(input:checked) label:hover::before {
+  background: #21a8c5;
+}
